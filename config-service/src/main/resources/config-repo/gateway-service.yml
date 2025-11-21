@@ -18,12 +18,11 @@ spring:
             - Path=/organizations/**
           filters:
             - StripPrefix=1
+    loadbalancer:
+      enabled: true
 
 eureka:
   client:
     service-url:
       defaultZone: http://eureka-service:8761/eureka/
 
-ribbon:
-  eureka:
-    enabled: true

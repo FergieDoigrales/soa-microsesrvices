@@ -11,8 +11,7 @@ spring:
       password: configpass
       fail-fast: true
     loadbalancer:
-      ribbon:
-        enabled: false
+      enabled: true
 
 first-service:
   base-url: http://organization-service-wildfly:8080/first-service/organizations
@@ -32,3 +31,7 @@ management:
   endpoint:
     health:
       show-details: always
+
+logging:
+  level:
+    org.springframework.cloud.loadbalancer: DEBUG
