@@ -23,6 +23,8 @@ spring:
             - Path=/organizations/**
           filters:
             - StripPrefix=1
+    loadbalancer:
+      enabled: true
 
 eureka:
   client:
@@ -41,3 +43,4 @@ logging:
   level:
     org.springframework.cloud.gateway: DEBUG
     org.springframework.cloud: DEBUG
+    org.springframework.cloud.loadbalancer: DEBUG
