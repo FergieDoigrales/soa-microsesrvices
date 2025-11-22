@@ -1,3 +1,12 @@
+For windows: use build-run.ps1
 
-./gradlew assemble -x test  
-docker-compose up -d --build 
+In other cases:
+docker compose down
+docker compose build
+docker-compose up config-service -d
+sleep 5
+curl http://localhost:8888/actuator/health
+docker-compose up eureka-service -d
+sleep 5
+curl http://localhost:8761/actuator/health
+docker-compose up -d
