@@ -49,3 +49,4 @@ logging:
     org.springframework.cloud.gateway: DEBUG
     org.springframework.cloud: DEBUG
     org.springframework.cloud.loadbalancer: DEBUG
+    org.springframework.cloud.consul: DEBUG
